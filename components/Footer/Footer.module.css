@@ -1,0 +1,39 @@
+/* components/Footer/Footer.module.css */
+.footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  background-color: var(--knicks-blue);
+  color: var(--knicks-white);
+  text-align: center;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footerLinks a {
+  color: var(--knicks-orange);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--knicks-silver);
+  text-decoration: underline;
+}
+
+.copyright {
+  color: var(--knicks-silver);
+  font-size: 0.9rem;
+}

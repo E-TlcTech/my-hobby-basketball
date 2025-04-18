@@ -1,103 +1,125 @@
 import Image from "next/image";
+import Link from "next/link";
+import styles from "./page.module.css";
 
-export default function Home() {
+export default async function Home() {
+  // Ici vous pourriez fetcher vos articles et événements récents
+  // depuis votre API
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1>
+            Bienvenue sur le <span className={styles.highlight}>Knicks</span>{" "}
+            Basketball Fansite
+          </h1>
+          <p>
+            Découvrez toute les news, les techniques et la fantastic histoire du
+            basketball à travers le prisme des New York Knicks.
+          </p>
+          <div className={styles.heroBtns}>
+            <Link href="/articles" className={`btn ${styles.primaryBtn}`}>
+              Voir les articles
+            </Link>
+            <Link href="/events" className={`btn ${styles.secondaryBtn}`}>
+              Événements à venir
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className={styles.heroImageContainer}>
+          <div className={styles.heroImage}>
+            {/* Vous pourriez ajouter une image des Knicks ici */}
+            <div className={styles.placeholder}>
+              <div className={styles.knicksBall}></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.featuredSection}>
+        <h2>Articles récents</h2>
+        <div className={styles.cardGrid}>
+          {/* Cartes d'articles (à remplacer par des données réelles) */}
+          <div className={styles.card}>
+            <div className={styles.cardImage}></div>
+            <div className={styles.cardContent}>
+              <h3>Les légendes des Knicks</h3>
+              <p>
+                Découvrez les plus grands joueurs ayant porté le maillot des
+                Knicks...
+              </p>
+              <Link href="/articles/1" className={styles.readMore}>
+                Lire plus
+              </Link>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div className={styles.cardImage}></div>
+            <div className={styles.cardContent}>
+              <h3>Techniques de dribble avancées</h3>
+              <p>
+                Apprenez les techniques de dribble utilisées par les stars des
+                Knicks...
+              </p>
+              <Link href="/articles/2" className={styles.readMore}>
+                Lire plus
+              </Link>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div className={styles.cardImage}></div>
+            <div className={styles.cardContent}>
+              <h3>Le Madison Square Garden</h3>
+              <p>Tout sur la mythique salle des Knicks...</p>
+              <Link href="/articles/3" className={styles.readMore}>
+                Lire plus
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.eventSection}>
+        <h2>Événements à venir</h2>
+        <div className={styles.eventList}>
+          {/* Liste d'événements (à remplacer par des données réelles) */}
+          <div className={styles.eventCard}>
+            <div className={styles.eventDate}>
+              <span className={styles.day}>15</span>
+              <span className={styles.month}>Mai</span>
+            </div>
+            <div className={styles.eventInfo}>
+              <h3>Match Knicks vs Lakers</h3>
+              <p>Madison Square Garden, 20h00</p>
+            </div>
+            <Link href="/events/1" className={styles.eventBtn}>
+              Détails
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className={styles.footerSection}>
+        <p>&copy; 2025 Knicks Fansite. Tous droits réservés.</p>
+        <p>
+          <Link href="/privacy-policy">Politique de Confidentialité</Link> |{" "}
+          <Link href="/terms-of-service">Conditions utilisateur</Link>
+        </p>
+        <p>
+          Suivez-nous sur{" "}
+          <Link href="https://twitter.com/Knicks" target="_blank">
+            Twitter
+          </Link>{" "}
+          |{" "}
+          <Link href="https://instagram.com/Knicks" target="_blank">
+            Instagram
+          </Link>{" "}
+          |{" "}
+          <Link href="https://facebook.com/Knicks" target="_blank">
+            Facebook
+          </Link>
+        </p>
+      </section>
     </div>
   );
 }

@@ -1,0 +1,282 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  min-height: 500px;
+}
+
+.heroContent {
+  flex: 1;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--knicks-blue);
+}
+
+.highlight {
+  color: var(--knicks-orange);
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  max-width: 600px;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background-color: var(--knicks-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #00549e;
+}
+
+.secondaryBtn {
+  background-color: var(--knicks-orange);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #e07215;
+}
+
+.heroImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  position: relative;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.knicksBall {
+  width: 200px;
+  height: 200px;
+  background-color: var(--knicks-orange);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.knicksBall:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background-color: var(--knicks-blue);
+}
+
+.knicksBall:after {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background-color: var(--knicks-blue);
+}
+
+.featuredSection,
+.eventSection {
+  margin-bottom: 4rem;
+}
+
+.featuredSection h2,
+.eventSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--knicks-blue);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.featuredSection h2:after,
+.eventSection h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--knicks-orange);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cardImage {
+  height: 180px;
+  background-color: var(--knicks-blue);
+  background-image: linear-gradient(
+    45deg,
+    var(--knicks-blue),
+    var(--knicks-orange)
+  );
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardContent h3 {
+  margin-bottom: 0.75rem;
+  color: var(--knicks-blue);
+}
+
+.cardContent p {
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.readMore {
+  color: var(--knicks-orange);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eventCard {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-3px);
+}
+
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  background-color: var(--knicks-blue);
+  color: white;
+  margin-right: 1.5rem;
+}
+
+.day {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.eventInfo {
+  flex: 1;
+}
+
+.eventInfo h3 {
+  color: var(--knicks-blue);
+  margin-bottom: 0.5rem;
+}
+
+.eventInfo p {
+  color: #666;
+}
+
+.eventBtn {
+  padding: 0.5rem 1rem;
+  background-color: var(--knicks-orange);
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.eventBtn:hover {
+  background-color: #e07215;
+  text-decoration: none;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

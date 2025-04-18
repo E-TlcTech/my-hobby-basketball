@@ -1,0 +1,170 @@
+/* app/articles/articles.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--knicks-blue);
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--knicks-orange);
+}
+
+.header p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.filters {
+  margin-bottom: 2rem;
+}
+
+.tagFilter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tagFilter span {
+  font-weight: 500;
+  color: #444;
+}
+
+.tagButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tagButton:hover {
+  background-color: #e0e0e0;
+}
+
+.tagButton.active {
+  background-color: var(--knicks-blue);
+  color: white;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.articleCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.articleCard:hover {
+  transform: translateY(-5px);
+}
+
+.articleImage {
+  height: 200px;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    45deg,
+    var(--knicks-blue),
+    var(--knicks-orange)
+  );
+}
+
+.articleContent {
+  padding: 1.5rem;
+}
+
+.articleMeta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.articleTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.articleTitle a {
+  color: var(--knicks-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.articleTitle a:hover {
+  color: var(--knicks-orange);
+}
+
+.articleExcerpt {
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.articleTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #444;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.readMore {
+  display: inline-block;
+  color: var(--knicks-orange);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .articlesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tagFilter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

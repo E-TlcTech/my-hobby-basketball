@@ -1,0 +1,258 @@
+/* app/events/events.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pageHeader h1 {
+  font-size: 2.5rem;
+  color: var(--knicks-blue);
+  margin-bottom: 1rem;
+}
+
+.pageHeader p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.filters {
+  margin-bottom: 3rem;
+}
+
+.searchBar {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.searchButton {
+  background-color: var(--knicks-blue);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.searchButton:hover {
+  background-color: var(--knicks-orange);
+}
+
+.tagFilters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filterLabel {
+  font-weight: 500;
+  color: #555;
+}
+
+.tagButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.tagButton {
+  background-color: #f0f0f0;
+  color: #444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tagButton:hover,
+.tagButton.active {
+  background-color: var(--knicks-orange);
+  color: white;
+}
+
+.eventsContainer {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.timelineBar {
+  position: absolute;
+  left: 104px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--knicks-blue);
+  opacity: 0.3;
+}
+
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.eventCard {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 110px;
+  background-color: var(--knicks-blue);
+  color: white;
+}
+
+.dateCircle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--knicks-blue);
+  margin-bottom: 0.5rem;
+}
+
+.dateMonth {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.dateDay {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dateTime {
+  font-size: 0.85rem;
+}
+
+.eventContent {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.eventTitle {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.eventTitle a {
+  color: var(--knicks-blue);
+  text-decoration: none;
+}
+
+.eventTitle a:hover {
+  color: var(--knicks-orange);
+}
+
+.eventLocation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.eventLocation svg {
+  color: var(--knicks-orange);
+}
+
+.eventDescription {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.eventFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eventTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #444;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.detailsButton {
+  background-color: var(--knicks-orange);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.detailsButton:hover {
+  background-color: var(--knicks-blue);
+}
+
+@media (max-width: 768px) {
+  .timelineBar {
+    display: none;
+  }
+
+  .eventCard {
+    flex-direction: column;
+  }
+
+  .eventDate {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.8rem;
+  }
+
+  .dateCircle {
+    margin-bottom: 0;
+  }
+}

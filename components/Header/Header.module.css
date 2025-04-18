@@ -1,0 +1,68 @@
+/* components/Header/Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--knicks-blue);
+  color: var(--knicks-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.logoText {
+  color: var(--knicks-white);
+  display: flex;
+  align-items: center;
+}
+
+.knicks {
+  color: var(--knicks-orange);
+  margin-right: 6px;
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navList a {
+  color: var(--knicks-white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navList a:hover {
+  color: var(--knicks-orange);
+}
+
+.active a {
+  color: var(--knicks-orange);
+  border-bottom: 2px solid var(--knicks-orange);
+}
+
+.logoutBtn {
+  background-color: transparent;
+  border: 1px solid var(--knicks-orange);
+  color: var(--knicks-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background-color: var(--knicks-orange);
+  color: var(--knicks-white);
+}
